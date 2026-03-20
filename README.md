@@ -1,7 +1,16 @@
 # SQL_PROTFOLIO_PROJECTS
-This Repo Consist Of Sql Portfolio  Projects Consists of :
+This Repo Consist Of Sql Portfolio  Projects Consists of my SQL-based data projects, focusing on data engineering, data warehousing, and analytics.
 
-1. Data Ware House Project
-   a. Data_sets
-   b. Scripts
-   c. Docs
+## Projects
+
+### 1. Data Warehouse Project (Main Project)
+- End-to-end SQL data warehouse implementation
+- Includes Bronze, Silver, and Gold layers
+- Covers data ingestion, transformation, and modeling
+
+## Structure
+
+- Datasets
+- Docs
+- Scripts
+
