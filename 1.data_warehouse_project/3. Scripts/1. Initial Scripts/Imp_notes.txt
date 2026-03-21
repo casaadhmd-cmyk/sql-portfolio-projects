@@ -1,0 +1,60 @@
+SELECT 
+    m.name AS table_name,
+    p.name AS column_name,
+    p.type AS data_type,
+    p.pk AS primary_key
+FROM sqlite_master m
+JOIN pragma_table_info(m.name) p
+WHERE m.type = 'table'
+ORDER BY m.name, p.cid;
+
+
+---TO GET THE INSERT STATEMENTS 
+
+SELECT name, sql
+FROM sqlite_master
+WHERE type = 'table'
+AND name LIKE 'bronze_%';
+
+---2. BULK INSERT 
+BULK INSERT bronze.erp_cust_az12
+		FROM 'C:\sql\dwh_project\datasets\source_erp\Filename.csv'
+		WITH (
+			FIRSTROW = 2,
+			FIELDTERMINATOR = ',',
+			TABLOCK
+		);
+
+
+--Sample :
+BULK INSERT JOMATO 
+FROM 'C:\Users\mohammed.saadh.ASCENDION\OneDrive - ascendion\Desktop\SQL ASSINGMENTS\MANDATORY 2\Jomato.csv'
+With 
+(
+	Firstrow=2,
+	Fildterminator=',',
+	Tablock
+
+);
+
+# Bulk Data Load in SQLite using DBeaver
+
+STEP 1: Create the table manually before import. Column names must match CSV headers.
+
+STEP 2: Right-click the table and choose Import Data.
+
+STEP 3: Select CSV as the source type since the dataset is in CSV format.
+
+STEP 4: Click Browse and select the CSV file.
+
+STEP 5: Ensure Encoding is UTF-8, Column delimiter is Comma (,), and Header position is Top so headers are not inserted as data.
+
+STEP 6: Check the Table Mapping preview and confirm columns align correctly.
+
+STEP 7: In data load settings, keep Transfer auto-generated columns and Use transactions enabled. Use Truncate table before load only when reloading data.
+
+STEP 8: Click Next → Finish to start the import.
+
+STEP 9: Verify that data has loaded successfully.
+
+STEP 10: SQLite does not support BULK INSERT; importing is done through tools like DBeaver
