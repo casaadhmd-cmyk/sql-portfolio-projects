@@ -26,6 +26,7 @@ With
 
 );
 
+*/
 # Bulk Data Load in SQLite using DBeaver
 
 STEP 1: Create the table manually before import. Column names must match CSV headers.
@@ -47,3 +48,4 @@ STEP 8: Click Next → Finish to start the import.
 STEP 9: Verify that data has loaded successfully.
 
 STEP 10: SQLite does not support BULK INSERT; importing is done through tools like DBeaver
+*/
