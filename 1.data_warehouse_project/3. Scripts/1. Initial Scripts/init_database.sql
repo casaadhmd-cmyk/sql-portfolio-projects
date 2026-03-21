@@ -11,6 +11,18 @@ WARNING:
     Running this script will drop the entire 'DataWarehouse' database if it exists. 
     All data in the database will be permanently deleted. Proceed with caution 
     and ensure you have proper backups before running this script.
+
+
+SELECT 
+    m.name AS table_name,
+    p.name AS column_name,
+    p.type AS data_type,
+    p.pk AS primary_key
+FROM sqlite_master m
+JOIN pragma_table_info(m.name) p
+WHERE m.type = 'table'
+ORDER BY m.name, p.cid;
+
 */
 
 USE master;
