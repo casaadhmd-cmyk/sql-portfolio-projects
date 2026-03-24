@@ -1,4 +1,4 @@
-# SQL_PROTFOLIO_PROJECTS
+# SQL_PORTFOLIO_PROJECTS
 This Repo Consist Of Sql Portfolio  Projects Consists of my SQL-based data projects, focusing on data engineering, data warehousing, and analytics.
 
 ## Projects
